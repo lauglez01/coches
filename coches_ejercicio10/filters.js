@@ -1,4 +1,4 @@
-export let createFilter = (fitlers, values) => {
+export let createFilter = (filters, values) => {
     let containerFilter = document.createElement("div");
     containerFilter.className = "filters";
 
@@ -7,7 +7,7 @@ export let createFilter = (fitlers, values) => {
 
       let strong = document.createElement("strong");
 
-      strong.textContent = `${fitlers[index]}:`;
+      strong.textContent = `${filters[index]}:`;
       span.appendChild(strong);
       
       let selectFilter = document.createElement("select");

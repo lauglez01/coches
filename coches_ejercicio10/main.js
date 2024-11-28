@@ -47,8 +47,8 @@ selectorFilter.forEach((select) => {
     if (divBlock) {
       divBlock.remove();
     }
-    const [year, make, model, type] = Array.from(selectorFilter).map(
-      (select) => select.value
+    const [year, make, model, type] = Array.from(selectorFilter).map((select) =>
+      select.value
     );
     getCars(cars, year, make, model, type);
   });

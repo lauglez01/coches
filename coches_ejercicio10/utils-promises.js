@@ -22,7 +22,7 @@ export let promiseFilter = (cars, year, make, model, type) => {
     if (cars !== null && cars !== undefined) {
       let carsFiltered = cars.filter((car) => {
         return (
-          (year === "ALL" || car.year === parseInt(year)) &&
+          (year === "ALL" || car.year >= parseInt(year)) &&
           (make === "ALL" || car.make === make) &&
           (model === "ALL" || car.model === model) &&
           (type === "ALL" || car.type === type)
@@ -30,7 +30,8 @@ export let promiseFilter = (cars, year, make, model, type) => {
       });
       resolve(carsFiltered);
     } else {
-      reject("promiseFilter: cars is null or undefined");
+      let error = new Error("Cars is null or undefined");
+      reject(error);
     }
   });
 };

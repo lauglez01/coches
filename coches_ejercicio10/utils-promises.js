@@ -40,13 +40,13 @@ export let promiseCreateDivCars = (cars) => {
     return new Promise((resolve, reject) => {
       if (cars !== null && cars !== undefined) {
         let carsDivs = cars.map((car) => {
-          let divs = document.createElement("div");
+          let div = document.createElement("div");
           let modelMakeParagraph = document.createElement("p");
           modelMakeParagraph.textContent = `Model: ${car.model}, Make: ${car.make}`;
           let typeYearParagraph = document.createElement("p");
           typeYearParagraph.textContent = `Type: ${car.type}, Year: ${car.year}`;
           divs.append(modelMakeParagraph, typeYearParagraph);
-          return divs;
+          return div;
         });
         resolve(carsDivs);
       } else {

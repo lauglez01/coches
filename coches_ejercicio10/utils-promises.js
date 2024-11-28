@@ -45,7 +45,7 @@ export let promiseCreateDivCars = (cars) => {
           modelMakeParagraph.textContent = `Model: ${car.model}, Make: ${car.make}`;
           let typeYearParagraph = document.createElement("p");
           typeYearParagraph.textContent = `Type: ${car.type}, Year: ${car.year}`;
-          divs.append(modelMakeParagraph, typeYearParagraph);
+          div.append(modelMakeParagraph, typeYearParagraph);
           return div;
         });
         resolve(carsDivs);
